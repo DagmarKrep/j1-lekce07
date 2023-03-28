@@ -59,6 +59,7 @@ public class Svatky {
    * @return Den a měsíc, případně {@code null}, pokud jméno nebylo nalezeno.
    */
   public MonthDay kdyMaSvatek(String jmeno) {
+    return svatky.get(jmeno);
     //TODO
     return null;
   }
@@ -69,6 +70,7 @@ public class Svatky {
    * @return {@code true}, pokud je jméno v seznamu. Jinak vrací {@code false}.
    */
   public boolean jeVSeznamu(String jmeno) {
+    return svatky.containsKey(jmeno);
     //TODO
     return false;
   }
@@ -78,6 +80,7 @@ public class Svatky {
    * @return
    */
   public int getPocetJmen() {
+    return svatky.size();
     //TODO
     return 0;
   }
@@ -87,6 +90,7 @@ public class Svatky {
    * @return Neseřazený seznam jmen.
    */
   public Set<String> getSeznamJmen() {
+    return svatky.keySet();
     //TODO
     return null;
   }
@@ -97,6 +101,7 @@ public class Svatky {
    * @param denMesic Den a měsíc, kdy má dané jméno svátek.
    */
   public void pridatSvatek(String jmeno, MonthDay denMesic) {
+    svatky.put(jmeno, MonthDay.of( MonthDay));
     //TODO
   }
 
@@ -107,6 +112,7 @@ public class Svatky {
    * @param mesic Měsíc, kdy má dané jméno svátek (1–12).
    */
   public void pridatSvatek(String jmeno, int den, int mesic) {
+    svatky.put(jmeno, MonthDay.of( mesic, den));
     //TODO
   }
 
